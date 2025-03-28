@@ -1,4 +1,61 @@
 @startuml
 
+class Hub
+class Casa
+class Usuario
+class Alexa
+class DispositivoHabitacion
+class DispositivoPasillo
+class Secuencia
+class Habitacion
+class Iluminacion
+class Artificial
+class Led
+class FocoPrincipal
+class Natural
+class Ventana
+class Cortina
+class Seguridad
+class Puerta
+class Alarma
+class ControladorClima
+class SensorHumedad
+class Ventilador
+class Pasillo
+class Corral
+class LuzCortesia
+class Sonido
+class Bocina
+class Enchufe
+
+
+Usuario o-- Hub
+Usuario o-- Alexa
+Alexa *-- Secuencia
+Secuencia o-- Casa
+Hub o-- Casa
+Casa *-- Habitacion
+Casa *-- Pasillo
+Pasillo o-- DispositivoPasillo
+Habitacion o-- DispositivoHabitacion
+DispositivoHabitacion *-- Iluminacion
+Iluminacion *-- Artificial
+Artificial <|-- Led
+Artificial <|-- FocoPrincipal
+Iluminacion *-- Natural
+Natural o-- Cortina 
+DispositivoHabitacion *-- ControladorClima
+ControladorClima *-- SensorHumedad
+SensorHumedad o-- Ventana
+ControladorClima o-- Ventilador
+DispositivoHabitacion *-- Seguridad
+Seguridad o-- Puerta
+Seguridad o-- Alarma
+
+DispositivoHabitacion *-- Sonido
+Bocina <|-- Sonido
+DispositivoPasillo o-- Enchufe
+DispositivoPasillo o-- Corral
+DispositivoPasillo o-- LuzCortesia
 
 @enduml

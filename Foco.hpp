@@ -1,3 +1,5 @@
+#pragma once
+
 class Foco
 {
 private:
@@ -22,6 +24,6 @@ public:
         if (encendido)
             return '*';
         else
-            return 'o';
+            return '-';
     }
 };
