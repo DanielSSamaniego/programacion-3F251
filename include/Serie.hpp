@@ -8,7 +8,7 @@ private:
     Foco focos[10];
 
 public:
-    Serie(/* args */) {}
+    Serie() {}
     ~Serie() {}
 
     void EncenderTodo()
